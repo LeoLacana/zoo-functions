@@ -82,9 +82,9 @@ Você só deve alterar os arquivos indicados nos requisitos. **Os arquivos que n
 ### ANTES DE COMEÇAR A DESENVOLVER
 
 1. Clone o repositório
-  * `git clone https://github.com/tryber/sd-011-project-zoo-functions-rubric.git`.
+  * `git clone git@github.com:tryber/sd-011-project-zoo-functions.git`.
   * Entre na pasta do repositório que você acabou de clonar:
-    * `cd sd-011-project-zoo-functions-rubric`
+    * `cd sd-011-project-zoo-functions`
 
 2. Instale as dependências
   * `npm install`
@@ -96,7 +96,7 @@ Você só deve alterar os arquivos indicados nos requisitos. **Os arquivos que n
     * Exemplo: `git checkout master`
   * Agora crie uma branch para qual você vai submeter os `commits` do seu projeto
     * Você deve criar uma branch no seguinte formato: `nome-de-usuario-nome-do-projeto`
-    * Exemplo: `git checkout -b luiza-zoo-functions-project`
+    * Exemplo: `git checkout -b nome-de-usuario-zoo-functions-project`
 
 4. Desenvolva a solução para os problemas no arquivo `src/zoo.js`. Você pode usar os arquivos do diretório `test` para verificar se a sua implementação está de acordo com o esperado;
 
@@ -149,7 +149,7 @@ Para **"entregar"** seu projeto, siga os passos a seguir:
 
 * Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas
   * No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**
-  * No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**
+  * No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário** ou clique em **assing yourself**
   * No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-00`
 
 Se ainda houver alguma dúvida sobre como entregar seu projeto, [aqui tem um video explicativo](https://vimeo.com/362189205).
@@ -339,8 +339,6 @@ Antes de começar, analise o arquivo `src/data.js`, para ver os dados que serão
 ## Avisos Finais
 
 ### REVISANDO UM PULL REQUEST
-
-À medida que você e as outras pessoas que estudam na Trybe forem entregando os projetos, vocês receberão um alerta via Slack para também fazer a revisão dos Pull Requests dos seus colegas. Fiquem atentos às mensagens do "Pull Reminders" no Slack!
 
 Use o material que você já viu sobre [Code Review](https://course.betrybe.com/real-life-engineer/code-review/) para te ajudar a revisar os projetos que chegaram para você.
 
