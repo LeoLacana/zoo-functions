@@ -73,7 +73,7 @@ Você só deve alterar os arquivos indicados nos requisitos. **Os arquivos que n
 
 ### DATA DE ENTREGA
 
-  - O projeto tem até a seguinte data: `dd/mm/yyyy - 14:00h` para ter entregue a avaliação final.
+  - Data de entrega para avaliação final do projeto: `17/05/2021 - 14:00h`
 
 ---
 
@@ -348,7 +348,7 @@ Use o material que você já viu sobre [Code Review](https://course.betrybe.com/
 
 Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência preenchendo o formulário. Leva menos de 3 minutos!
 
-Link: [FORMULÁRIO DE AVALIAÇÃO DE PROJETO](https://bit.ly/2OfLJPn)
+Link: [FORMULÁRIO DE AVALIAÇÃO DE PROJETO](https://be-trybe.typeform.com/to/ZTeR4IbH#cohort_name=Turma%2011)
 
 ### ORDEM DOS REQUISITOS NO AVALIADOR AUTOMÁTICO
 
