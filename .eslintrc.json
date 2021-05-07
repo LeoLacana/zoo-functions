@@ -1,11 +1,33 @@
 {
-    "env": {
-        "es2020": true
-    },
-    "extends": "trybe-fundamentals",
-    "rules": {
-      "max-lines": "off",
-      "max-params": "off",
-      "linebreak-style": "off"
-    }
+  "root": true,
+  "extends": [
+    "trybe-fundamentals"
+  ],
+  "rules": {
+    "max-lines": "off",
+    "max-len": "off",
+    "no-console": "off",
+    "prefer-arrow-callback": "off",
+    "func-names": "off",
+    "no-param-reassign": "off",
+    "max-params": "off",
+    "prefer-const": "off",
+    "no-unused-vars": "off",
+    "max-lines-per-function": "off",
+    "no-var": "off",
+    "vars-on-top": "off",
+    "block-scoped-var": "off",
+    "no-redeclare": "off",
+    "no-restricted-syntax": [
+      "off",
+      "FunctionExpression",
+      "WithStatement",
+      "BinaryExpression[operator='in']"
+    ]
+  },
+  "env": {
+    "browser": false,
+    "node": true,
+    "jest": true
+  }
 }
