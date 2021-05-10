@@ -13,9 +13,7 @@ const { species } = require('./data');
 const data = require('./data');
 
 function getSpeciesByIds(...ids) {
-  return species
-  .filter((objectSpecies) => ids
-    .some((valueIds) => objectSpecies.id === valueIds));
+  return species.filter((objectSpecies) => ids.some((valueIds) => objectSpecies.id === valueIds));
 }
 
 function getAnimalsOlderThan(animal, age) {
