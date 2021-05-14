@@ -9,7 +9,7 @@ eslint no-unused-vars: [
 ]
 */
 
-const { species, employees, prices } = require('./data');
+const { species, employees, prices, hours } = require('./data');
 const data = require('./data');
 
 function getSpeciesByIds(...ids) {
@@ -64,12 +64,41 @@ function calculateEntry(entrants) {
   return Object.keys(entrants).reduce((sum, current) => sum + (entrants[current] * prices[current]), 0);
 }
 
+const mapGeo = (local) => species.filter((element) => element.location === local).map((objectNames) => objectNames.name);
+
+const mapGeoNames = (sorted, sex) => {
+  const arrayAnimalObject = { NE: [], NW: [], SE: [], SW: [] };
+  species.forEach((specie) => {
+    let names;
+    if (sex !== undefined) {
+      const sexName = specie.residents.filter((resident) => resident.sex === sex);
+      names = sexName.map((resident) => resident.name);
+    } else {
+      names = specie.residents.map((resident) => resident.name);
+    }
+    if (sorted === true) {
+      names.sort();
+    }
+    arrayAnimalObject[specie.location].push({ [specie.name]: names });
+  });
+  return arrayAnimalObject;
+};
+
 function getAnimalMap(options) {
-  // seu código aqui
+  if (options !== undefined && options.includeNames === true) {
+    return mapGeoNames(options.sorted, options.sex);
+  }
+  const object = { NE: mapGeo('NE'), NW: mapGeo('NW'), SE: mapGeo('SE'), SW: mapGeo('SW') };
+  return object;
 }
 
+getAnimalMap({ includeNames: true, sorted: true });
+
 function getSchedule(dayName) {
-  // seu código aqui
+  if (!dayName) {
+    const keys = Object.keys(data.hours);
+    return keys.filter((value, index) => value[index]);
+  }
 }
 
 function getOldestFromFirstSpecies(id) {
