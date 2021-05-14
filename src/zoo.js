@@ -64,6 +64,7 @@ function calculateEntry(entrants) {
   return Object.keys(entrants).reduce((sum, current) => sum + (entrants[current] * prices[current]), 0);
 }
 
+// As Funções mapGeo e mapGeoNames são para getAnimalMap
 const mapGeo = (local) => species.filter((element) => element.location === local).map((objectNames) => objectNames.name);
 
 const mapGeoNames = (sorted, sex) => {
@@ -92,13 +93,31 @@ function getAnimalMap(options) {
   return object;
 }
 
-getAnimalMap({ includeNames: true, sorted: true });
+// A função dayNameOk é para a getSchedule
+const dayNameOk = (dayName) => {
+  let objectHours = {};
+  if (dayName === 'Monday') {
+    objectHours[dayName] = 'CLOSED';
+  } else {
+    objectHours[dayName] = `Open from ${hours[dayName].open}am until ${hours[dayName].close - 12}pm`;
+  }
+  return objectHours;
+};
 
 function getSchedule(dayName) {
+  const keys = Object.keys(data.hours);
+  let objectHours = {};
   if (!dayName) {
-    const keys = Object.keys(data.hours);
-    return keys.filter((value, index) => value[index]);
+    keys.forEach((value) => {
+      if (value === 'Monday') {
+        objectHours[value] = 'CLOSED';
+      } else {
+        objectHours[value] = `Open from ${hours[value].open}am until ${hours[value].close - 12}pm`;
+      }
+    });
+    return objectHours;
   }
+  return dayNameOk(dayName);
 }
 
 function getOldestFromFirstSpecies(id) {
